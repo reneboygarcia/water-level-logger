@@ -1,0 +1,17 @@
+# cron schedule
+# @reboot /home/pi/base/bin/python -u /home/pi/water_level_logger_ultrasonic.py > /home/pi/water_level.log 2>&1
+# @reboot sleep 5 && sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
+@reboot sleep 15 && /bin/bash -c 'source /home/pi/base/bin/activate && python /home/pi/water_level_logger_ultrasonic.py' > /home/pi/water_level.log 2>&1
+
+
+# Force synchronize time
+# @reboot sleep 5 && sudo date -s "$(wget -qS0- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
+# 0 * * * * sudo date -s "$(wget -qS0- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
+
+# Run water level logger on reboot
+@reboot sleep 10 && /home/pi/base/bin/python -u /home/pi/water_level_logger_ultrasonic.py > /home/pi/water_level.log 2>&1
+# Reboot at 12:10am every day
+10 0 * * * /home/pi/base/bin/python -u /home/pi/water_level_logger_ultrasonic.py > /home/pi/water_level.log 2>&1
+
+
+@reboot sleep 3 && /home/pi/base/bin/python -u /home/pi/sim808_init_internet.py > /home/pi/sim808_init_internet.log 2>&1
