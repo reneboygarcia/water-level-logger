@@ -1,16 +1,39 @@
 # Water Level Monitoring System
-A Raspberry Pi-based water level monitoring system designed for accurate and reliable measurement of water levels in various environments. This system utilizes the following key components:
+
+## Table of Contents
+- [Water Level Monitoring System](#water-level-monitoring-system)
+  - [Table of Contents](#table-of-contents)
+  - [Video Demonstration](#video-demonstration)
+  - [Components Overview](#components-overview)
+  - [Key Features](#key-features)
+  - [Hardware Requirements](#hardware-requirements)
+  - [Wiring Guide](#wiring-guide)
+  - [Circuit Diagram](#circuit-diagram)
+    - [JSN-SR04T Connections](#jsn-sr04t-connections)
+    - [DS3231 RTC Connections](#ds3231-rtc-connections)
+  - [Software Setup](#software-setup)
+    - [1. Install Raspberry Pi OS](#1-install-raspberry-pi-os)
+    - [2. Configure NTP Servers (Optional)](#2-configure-ntp-servers-optional)
+    - [3. Install Dependencies](#3-install-dependencies)
+    - [4. Google Sheets Setup](#4-google-sheets-setup)
+    - [5. Test Hardware Components](#5-test-hardware-components)
+    - [6. Set up Cron Jobs](#6-set-up-cron-jobs)
+    - [7. Final System Test](#7-final-system-test)
+  - [Additional Resources](#additional-resources)
+
+This system utilizes the following key components:
+
 ## Video Demonstration
 Check out our video demonstration of the Water Level Monitoring System in action:
 
 [![Water Level Monitoring System Demo](https://img.youtube.com/vi/vs7RvUMaflU/0.jpg)](https://youtube.com/shorts/vs7RvUMaflU)
 
-
+## Components Overview
 1. JSN-SR04T Ultrasonic Sensor: A waterproof sensor capable of precise distance measurements, ideal for water level detection.
 2. DS3231 Real-Time Clock (RTC) Module: Ensures accurate timekeeping even during power outages or network disconnections.
 3. Raspberry Pi Zero 2 W: A compact and powerful single-board computer that serves as the brain of the system.
 
-Key Features:
+## Key Features
 - Continuous water level monitoring with readings taken every 5 minutes
 - Data logging to Google Sheets for easy access and analysis
 - Prefect workflow management for reliable and scheduled data collection
@@ -194,5 +217,9 @@ To enable logging data to Google Sheets:
 
 If everything functions correctly, your water level monitoring system is ready for deployment.
 
-For more information on Prefect, visit the [official Prefect documentation](https://docs.prefect.io/) or check out the [Prefect Quickstart guide](https://docs.prefect.io/latest/getting-started/quickstart/). Also, here is the link of my ChatGPT prompts
+## Additional Resources
+- [Official Prefect Documentation](https://docs.prefect.io/)
+- [Prefect Quickstart Guide](https://docs.prefect.io/latest/getting-started/quickstart/)
+- [ChatGPT Prompts Used](https://chatgpt.com/share/162b96fa-579a-4c78-aa06-07bfc86260ab)
+https://chatgpt.com/share/162b96fa-579a-4c78-aa06-07bfc86260ab
 https://chatgpt.com/share/162b96fa-579a-4c78-aa06-07bfc86260ab
